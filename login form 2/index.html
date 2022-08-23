@@ -14,6 +14,7 @@
 		<h2>Create Account</h2>
 	</div>
 	<form id="form" class="form">
+
 		<div class="form-control">
 			<label for="username">Username</label>
 			<input type="text" placeholder="username" id="username" />
@@ -21,6 +22,7 @@
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
+
 		<div class="form-control">
 			<label for="username">Email</label>
 			<input type="email" placeholder="email@email.com" id="email" />
@@ -28,6 +30,7 @@
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
+
 		<div class="form-control">
 			<label for="username">Password</label>
 			<input type="password" placeholder="Password" id="password"/>
@@ -35,6 +38,7 @@
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
+
 		<div class="form-control">
 			<label for="username">Password check</label>
 			<input type="password" placeholder="Password" id="password2"/>
@@ -42,21 +46,45 @@
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
-		<div class="form-control">
-			<label for="username">Gender</label>
-			<input type="Gender" placeholder="Female/Male" id="Gender"/>
+
+		<div class="form-control" >
+		
+			<p>Please select your preferred contact method:</p>
+			<div id="contactChoice">
+			<input type="checkbox" id="contactChoice" name="contact" value="email" > Email <br>
+			<input type="checkbox" id="contactChoice" name="contact" value="phone"> Phone <br>
+			</div>
 			<i class="fas fa-check-circle"></i>
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
 		</div>
+
 		<div class="form-control">
+
+			<p>Gender</p>
+			<div id="Gender">
+			<input type="radio" value="female" name="gender">
+			<label for="username">female</label>
+
+			<input type="radio" value="male" name="gender">
+			<label for="username">male</label>
+			</div>
+
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+
+		<div class="form-control">
+
 			<label for="username">Phone Number</label>
-			<input type="PhoneNumber" placeholder="123-45-678" id="PhoneNumber"/>
+			<input type="tel" placeholder="123-45-678" id="PhoneNumber"/>
 			<i class="fas fa-check-circle"></i>
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
-		</div>
-		<button>Submit</button>
+		</div> 
+
+	<button>Submit</button>
 	</form>
 </div>
 <script src="java.js"></script>
