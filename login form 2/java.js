@@ -5,7 +5,6 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 const PhoneNumber = document.getElementById('PhoneNumber');
-const  contactChoice =document.getElementById("contactChoice").value;
 
 
 
@@ -68,16 +67,33 @@ function checkInputs() {
 		setErrorFor(PhoneNumber, 'PhoneNumber cannot be blank');
 	} else{
 		setSuccessFor(PhoneNumber);
-	}
 
-	if(contactChoice.checked==false)
-	{
-	alert("plz check the checkbox field");
-	document.getElementbyId("contactChoice").focus();
-	return false;
 	}
 
 }
+	
+function myFunction() {
+
+  
+	let Email = document.getElementById("contactChoice1").checked;
+	if (Email == true) {
+	   document.getElementById("demo1").innerHTML = "contact choice is email";
+	} else{
+	   document.getElementById('demo1').innerHTML="";
+	}
+	
+	let Phone = document.getElementById("contactChoice2").checked;
+	if (Phone == true) {
+		  document.getElementById("demo2").innerHTML = "contact choice is phone";
+	  } else {
+		  document.getElementById('demo2').innerHTML="";
+	  }
+
+
+	}
+
+
+
 
 function setErrorFor(input, message) {
 	const formControl = input.parentElement;
@@ -94,22 +110,4 @@ function setSuccessFor(input) {
 function isEmail(email) {
 return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-// const contactChoice = document.getElementById('contactChoice');
-// const Gender = document.getElementById('Gender');
 
-
-// var getSelectedValue = document.querySelector( 'input[name="contact"]:checked');  
-// var getSelectedValue = document.querySelector( 'input[name="gender"]:checked');  
-
-// if(getSelectedValue != null) {   
-	// 	document.getElementById("contactChoice").innerHTML=getSelectedValue.value +(" is selected");  
-	// } else{  
-	// 	document.getElementById("error").innerHTML= "*You have not selected any choice";    
-	// }
-
-
-	// if(getSelectedValue != null) {   
-	// 	document.getElementById("Gender").innerHTML=getSelectedValue.value +(" is selected");  
-	// } else{  
-	// 	document.getElementById("error").innerHTML= "*You have not selected any choice";    
-	// }
