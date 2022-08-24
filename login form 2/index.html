@@ -24,6 +24,14 @@
 		</div>
 
 		<div class="form-control">
+			<label for="username">Age</label>
+			<input type="number" placeholder="age" id="age" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+
+		<div class="form-control">
 			<label for="username">Email</label>
 			<input type="email" placeholder="email@email.com" id="email" />
 			<i class="fas fa-check-circle"></i>
@@ -47,12 +55,21 @@
 			<small>Error message</small>
 		</div>
 
+		<div class="form-control">
+
+			<label for="username">Phone Number</label>
+			<input type="tel" placeholder="123-45-678" id="PhoneNumber"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div> 
+
 		<div class="form-control" >
 		
 			<p>Please select your preferred contact method:</p>
 			<div id="contactChoice">
-			<input type="checkbox" id="contactChoice" name="contact" value="email" > Email <br>
-			<input type="checkbox" id="contactChoice" name="contact" value="phone"> Phone <br>
+			<input type="checkbox" id="contactChoice1" name="contact" value="email" > Email <br>
+			<input type="checkbox" id="contactChoice2" name="contact" value="phone"> Phone <br>
 			</div>
 			<i class="fas fa-check-circle"></i>
 			<i class="fas fa-exclamation-circle"></i>
@@ -75,14 +92,6 @@
 			<small>Error message</small>
 		</div>
 
-		<div class="form-control">
-
-			<label for="username">Phone Number</label>
-			<input type="tel" placeholder="123-45-678" id="PhoneNumber"/>
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div> 
 
 	<button>Submit</button>
 	</form>

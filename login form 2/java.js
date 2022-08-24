@@ -1,11 +1,11 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
+const age= document.getElementById('age');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-const contactChoice = document.getElementById('contactChoice');
-const Gender = document.getElementById('Gender');
-
+const PhoneNumber = document.getElementById('PhoneNumber');
+const  contactChoice =document.getElementById("contactChoice").value;
 
 
 
@@ -21,8 +21,8 @@ function checkInputs() {
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
 	const password2Value = password2.value.trim();  
-	var getSelectedValue = document.querySelector( 'input[name="contact"]:checked');  
-	var getSelectedValue = document.querySelector( 'input[name="gender"]:checked');  
+	const ageValue = age.value.trim();
+	const PhoneNumberValue = PhoneNumber.value.trim();
 
 	if(usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
@@ -30,6 +30,14 @@ function checkInputs() {
 		setErrorFor(username, 'Username must be longer than 3 characters');
 	} else {
 		setSuccessFor(username);
+	}
+
+	if(ageValue === '') {
+		setErrorFor(age, 'age cannot be blank');
+	} else if(ageValue< 18 ) {
+		setErrorFor(age, 'age must be older than 18 ');
+	} else{
+		setSuccessFor(age);
 	}
 	
 	if(emailValue === '') {
@@ -55,44 +63,20 @@ function checkInputs() {
 	} else{
 		setSuccessFor(password2);
 	}
-
-
-	if(getSelectedValue != null) {   
-		document.getElementById("contactChoice").innerHTML=getSelectedValue.value +(" is selected");  
-	} else{  
-		document.getElementById("error").innerHTML= "*You have not selected any choice";    
-	}
-
-
-	if(getSelectedValue != null) {   
-		document.getElementById("Gender").innerHTML=getSelectedValue.value +(" is selected");  
-	} else{  
-		document.getElementById("error").innerHTML= "*You have not selected any choice";    
-	}
-
 	
+	if(PhoneNumberValue === '') {
+		setErrorFor(PhoneNumber, 'PhoneNumber cannot be blank');
+	} else{
+		setSuccessFor(PhoneNumber);
+	}
 
-	// document.getElementById('contactChoice').onclick = function() {
-	// var markedCheckbox = document.getElementsByName('contact');
-	// for (var checkbox of markedCheckbox) {
-	// if (checkbox.checked)
-	// document.body.append(checkbox.value + ' ');
-	// }
-	// }
+	if(contactChoice.checked==false)
+	{
+	alert("plz check the checkbox field");
+	document.getElementbyId("contactChoice").focus();
+	return false;
+	}
 
-    // if(GenderValue === '') {
-	// 	setErrorFor(Gender, 'Gender cannot be blank');
-    // } else if(GenderValue != "female" || GenderValue != "male" ) {
-	// 	setErrorFor(Gender, 'Gender is not correct');
-	// } else{
-	// 	setSuccessFor(Gender);
-	// }
-
-    // if(PhoneNumberValue === '') {
-	// 	setErrorFor(PhoneNumber, 'PhoneNumber cannot be blank');
-	// } else{
-	// 	setSuccessFor(PhoneNumber);
-	// }
 }
 
 function setErrorFor(input, message) {
@@ -110,3 +94,22 @@ function setSuccessFor(input) {
 function isEmail(email) {
 return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+// const contactChoice = document.getElementById('contactChoice');
+// const Gender = document.getElementById('Gender');
+
+
+// var getSelectedValue = document.querySelector( 'input[name="contact"]:checked');  
+// var getSelectedValue = document.querySelector( 'input[name="gender"]:checked');  
+
+// if(getSelectedValue != null) {   
+	// 	document.getElementById("contactChoice").innerHTML=getSelectedValue.value +(" is selected");  
+	// } else{  
+	// 	document.getElementById("error").innerHTML= "*You have not selected any choice";    
+	// }
+
+
+	// if(getSelectedValue != null) {   
+	// 	document.getElementById("Gender").innerHTML=getSelectedValue.value +(" is selected");  
+	// } else{  
+	// 	document.getElementById("error").innerHTML= "*You have not selected any choice";    
+	// }
